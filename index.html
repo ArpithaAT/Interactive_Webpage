@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Profile</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Student Profile</h1>
+        <br>
+        <form action="" onsubmit="return validateForm()">
+            <fieldset>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="contact">Contact No:</label>
+                        <input type="text" id="contact" name="contact" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="location">Location:</label>
+                        <input type="text" id="location" name="location" required>
+                    </div>
+                </div>
+                <!-- <div class="form-row">
+                    <div class="form-group">
+                        <label for="experience">Experience (in years):</label>
+                        <input type="number" id="experience" name="experience" required>
+                    </div>
+                </div> -->
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="experience">Experience:</label>
+                        <select id="experience" name="experience" required>
+                            <option value="">---Select---</option>
+                            <option value="Fresher">Fresher</option>
+                            <option value="0-1">1-2 years</option>
+                            <option value="1-3">1-3 years</option>
+                            <option value="3-5">3-5 years</option>
+                            <option value="5+">5+ years</option>
+                        </select>
+                    </div>
+                </div>
+
+
+
+                <div class="form-row">
+                    <div class="form-group dropdown">
+                        <label for="role-selector">Desired Role:</label>
+                        
+                            <select id="role-selector" name="role" onchange="changeContent()" required>
+                            <option value="">---Select---</option>
+                            <option value="Frontend">Frontend Developer</option>
+                            <option value="Backend">Backend Developer</option>
+                            <option value="FullStack">Full Stack Developer</option>
+                            <option value="DevOps">DevOps Engineer</option>
+                            <option value="CloudEngineer">Cloud Engineer</option>
+                            <option value="MobileDeveloper">Mobile Developer</option>
+                        </select>
+                    </div>
+                </div>
+                <div id="content-display" class="content">
+                    <p>Please select a role from the dropdown menu.</p>
+                </div>
+                <div class="form-row submit-row">
+                    <button type="submit" class="submit-btn">Submit</button>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
